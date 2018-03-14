@@ -12,7 +12,7 @@ To run for **livenet**:
 
 ### Environment variables
 
-- `DASH_LIVENET` (default: 0) - Set 1 to enable livenet
+- `LITECOIN_LIVENET` (default: 0) - Set 1 to enable livenet
 - `API_ROUTE_PREFIX` (default: api) - Set URL prefix for Insight API
 - `UI_ROUTE_PREFIX` (default: "") - Set URL prefix for Insight UI
 - `API_CACHE_ENABLE` (default: 1) - Enable/disable Insight API cache
