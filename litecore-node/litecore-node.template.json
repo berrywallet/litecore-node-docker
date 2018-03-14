@@ -1,0 +1,37 @@
+{
+  "network": "${LITECOIN_NETWORK_NAME}",
+  "port": 3001,
+  "services": [
+    "bitcoind",
+    "insight-lite-api",
+    "insight-lite-ui",
+    "web"
+  ],
+  "servicesConfig": {
+    "bitcoind": {
+      "spawn": {
+        "datadir": "./data",
+        "exec": "./node_modules/.bin/litecoind"
+      }
+    },
+    "insight-lite-ui": {
+      "routePrefix": "${UI_ROUTE_PREFIX}",
+      "apiPrefix": "${API_ROUTE_PREFIX}"
+    },
+    "insight-lite-api": {
+      "routePrefix": "${API_ROUTE_PREFIX}",
+      "rateLimiterOptions": {
+        "limit": ${API_LIMIT_COUNT},
+        "internval": ${API_LIMIT_INTERVAL},
+        "whitelistLimit": ${API_LIMIT_COUNT},
+        "whitelistInterval": ${API_LIMIT_WHITELIST_INTERVAL},
+        "blacklistLimit": ${API_LIMIT_COUNT},
+        "blacklistInterval": ${API_LIMIT_BLACKLIST_INTERVAL},
+        "whitelist": ${API_LIMIT_WHITELIST_JSON},
+        "blacklist": ${API_LIMIT_BLACKLIST_JSON}
+      },
+      "enableCache": ${API_ENABLE_CACHE},
+      "disableRateLimiter": ${API_LIMIT_DISABLE}
+    }
+  }
+}
