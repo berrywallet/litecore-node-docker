@@ -10,6 +10,8 @@ To run for **livenet**:
 `docker run -e LITECOIN_LIVENET=1 -d -p 3001:3001 -p 9333:9333 -v /root/litecoin-node/livenet:/root/litecoin-node/data --name litecoin-livenet berrywallet/litecore-node`
 
 
+Tip: Ports 9333 (livenet) and 19335 (testnet) are inbound for litecoind. Exposing them is just recommended.
+
 ### Environment variables
 
 - `LITECOIN_LIVENET` (default: 0) - Set 1 to enable livenet
