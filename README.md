@@ -3,11 +3,11 @@ Litecore Node + Insight API + Insight UI in Docker
 
 To run **testnet** (the default):
 
-`docker run -d -p 3001:3001 -p 19332:19332 -v /root/litecoin-node/testnet:/root/litecoin-node/data --name litecoin-testnet berrywallet/litecore-node`
+`docker run -d -p 3001:3001 -p 19335:19335 -v /root/litecoin-node/testnet:/root/litecoin-node/data --name litecoin-testnet berrywallet/litecore-node`
 
 To run for **livenet**:
 
-`docker run -e LITECOIN_LIVENET=1 -d -p 3001:3001 -p 9332:9332 -v /root/litecoin-node/livenet:/root/litecoin-node/data --name litecoin-livenet berrywallet/litecore-node`
+`docker run -e LITECOIN_LIVENET=1 -d -p 3001:3001 -p 9333:9333 -v /root/litecoin-node/livenet:/root/litecoin-node/data --name litecoin-livenet berrywallet/litecore-node`
 
 
 ### Environment variables

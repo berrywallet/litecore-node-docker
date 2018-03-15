@@ -15,7 +15,7 @@ RUN apt-get update && \
   wget https://github.com/Yelp/dumb-init/releases/download/v1.2.1/dumb-init_1.2.1_amd64.deb && \
   dpkg -i dumb-init_*.deb
 
-EXPOSE 3001 3232 9332 19332
+EXPOSE 3001 9333 19335
 
 WORKDIR /root/litecoin-node
 COPY litecore-node ./
